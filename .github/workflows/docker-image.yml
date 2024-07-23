@@ -35,7 +35,7 @@ jobs:
 
       - name: Save version info
         run: |
-          git describe --tags > VERSION 
+          ${{ inputs.tags }}  > VERSION 
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
